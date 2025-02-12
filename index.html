@@ -14,7 +14,7 @@
         <div class="flex flex-col gap-4 items-center pb-10">
             <h2 class="text-5xl max-md:text-2xl font-bold">অরণ্য কুরআন শরীফ রিহাল</h2>
             <h2 class="font-bold text-lg max-md:text-sm">প্রিমিয়াম মালয়েশিয়ান ঊড ও ইটালিয়ান ল্যাকার ফিনিশিং </h2>
-            <button class="w-fit text-black text-3xl max-md:text-xl font-bold bg-[#F6DC2D] px-6 py-4 rounded">এখনি অর্ডার করুন <i class="fa-solid fa-arrow-down-long"></i></button>
+            <button class="w-fit text-black text-3xl max-md:text-xl font-bold bg-[#F6DC2D] px-6 py-4 rounded cursor-pointer">এখনি অর্ডার করুন <i class="fa-solid fa-arrow-down-long"></i></button>
         </div>
         <img class="w-[65%] max-md:w-[80%] rounded" src="./assets/banner.jpg" alt="" srcset="">
     </section>
@@ -71,7 +71,7 @@
             রেগুলার প্রাইস <span class="text-red-500 line-through">৪৫০০</span> টাকা
         </h2>
         <h2 class="text-4xl max-md:text-2xl font-bold">অফার প্রাইস মাত্র ২৫০০ টাকা</h2>
-        <button class="w-fit text-black text-3xl max-md:text-2xl font-bold bg-[#F6DC2D] px-10 py-6 rounded">
+        <button class="w-fit text-black text-3xl max-md:text-2xl font-bold bg-[#F6DC2D] px-10 py-6 rounded cursor-pointer">
             অর্ডার করতে চাই <i class="fa-solid fa-cart-arrow-down"></i>
         </button>
     </section>
@@ -85,6 +85,115 @@
     </section>
 
     <section class="max-w-[1150px] flex flex-col items-center gap-16 mt-[100px]">
+        <h1 class="text-5xl max-md:text-3xl text-center font-bold">প্রোডাক্টটি অর্ডার করতে ফর্মটি পূরণ করুন</h1>
+        <div class="w-full bg-white text-black p-12 shadow-md rounded-md">
+            <div class="flex max-md:flex-col-reverse items-start gap-16">
+                <div class="w-[60%] max-md:w-full flex flex-col gap-4">
+                    <h2 class="text-lg font-bold mb-4">Customer information</h2>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Email Address *</label>
+                        <input type="email" class="w-full p-2 border border-gray-300 rounded-md mb-4" placeholder="Email Address">
+                    </div>
+    
+                    <h2 class="text-lg font-bold mb-4">Billing details</h2>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">আপনার নাম লিখুন *</label>
+                        <input type="text" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+                    </div>
+    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">আপনার ঠিকানা লিখুন *</label>
+                        <input type="text" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+                    </div>
+    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">আপনার মোবাইল নাম্বার লিখুন *</label>
+                        <input type="text" class="w-full p-2 border border-gray-300 rounded-md mb-4">
+                    </div>
+    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Order notes (optional)</label>
+                        <textarea class="w-full p-2 border border-gray-300 rounded-md mb-4" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                    </div>
+    
+                    <h2 class="text-lg font-semibold mb-4">Payment</h2>
+                    <div class="flex flex-col border border-gray-300 text-gray-600">
+                        <div class="flex justify-between items-center p-5 border-b border-gray-300 rounded-md bg-gray-50">
+                            <div class="cursor-pointer">
+                                <input type="radio" id="cash-on" name="payment-method" value="CASH" checked>
+                                <label for="cash-on">Cash on Delivery</label>
+                            </div>
+                            <div class="cursor-pointer flex items-center">
+                                <input type="radio" id="bkash" name="payment-method" value="BKASH">
+                                <label for="bkash">
+                                    <img class="w-[100px]" src="https://download.logo.wine/logo/BKash/BKash-bKash-Logo.wine.png" alt="">
+                                </label>
+                            </div>
+                        </div>                        
+                        <p class="p-5">🎁 ১ টাকাও অগ্রিম পেমেন্ট ছাড়া সারা বাংলাদেশ এ ক্যাশ অন ডেলিভারি তে অর্ডার করুন ।</p>
+                    </div>
+    
+                    <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#" class="text-green-900">Privacy policy.</a></p>
+    
+                    <button class="w-full bg-green-900 text-white py-4 rounded-md place-order-btn cursor-pointer">
+                        <i class="fa-solid fa-lock"></i> Place Order <span id="finalTotal">2,500.00</span>৳
+                    </button>
+                    
+                    <h2 class="text-lg font-bold mt-4">Your products</h2>
+                    <div class="flex flex-col">
+                        <div class="flex justify-between border-b border-gray-300 text-sm font-semibold p-6">
+                            <span class="w-[60%] text-center">Product</span>
+                            <span class="w-[20%] text-center">Quantity</span>
+                            <span class="w-[20%] text-center">Price</span>
+                        </div>
+    
+                        <div class="flex justify-between items-center border-b border-gray-300 text-sm p-6">
+                            <span class="w-[60%] text-center">কোরআন শরীফ রিয়াল × <span id="productQty">1</span></span>
+                            <div class="w-[20%] flex items-center justify-between">
+                                <button class="bg-gray-300 px-2 rounded-md text-sm font-bold cursor-pointer" id="decreaseQty">−</button>
+                                <span class="text-lg font-bold" id="quantity">1</span>
+                                <button class="bg-gray-300 px-2 rounded-md text-sm font-bold cursor-pointer" id="increaseQty">+</button>
+                            </div>
+                            <span class="w-[20%] text-center" id="subtotal">2,500.00৳</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="w-[40%] max-md:w-full">
+                    <h2 class="text-lg font-bold mb-4">Your order</h2>
+                    <div class="border border-gray-300 rounded-md" id="orderList">
+                        <div class="flex justify-between border-b border-gray-300 text-sm font-semibold p-6">
+                            <span>Product</span>
+                            <span>Subtotal</span>
+                        </div>
+    
+                        <div class="flex justify-between border-b border-gray-300 text-sm p-6">
+                            <span>কোরআন শরীফ রিয়াল × <span id="productQty">1</span></span>
+                            <span id="subtotal">2,500.00৳</span>
+                        </div>
+    
+                        <div class="flex justify-between border-b border-gray-300 text-sm font-semibold p-6">
+                            <span>Subtotal</span>
+                            <span id="subtotalDisplay">2,500.00৳</span>
+                        </div>
+    
+                        <div class="flex justify-between text-lg font-bold p-4">
+                            <span>Total</span>
+                            <span id="totalPrice">2,500.00৳</span>
+                        </div>
+                    </div>
+    
+                    <div class="mt-4 flex gap-2">
+                        <input type="text" class="w-full p-2 border rounded-md">
+                        <button class="bg-green-900 text-white px-4 py-2 rounded-md cursor-pointer">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- <section class="max-w-[1150px] flex flex-col items-center gap-16 mt-[100px]">
         <h1 class="text-5xl max-md:text-3xl text-center font-bold">প্রোডাক্টটি অর্ডার করতে ফর্মটি পূরণ করুন</h1>
         <div class="max-w-5xl w-[80%] max-md:w-full bg-white text-black p-12 shadow-md rounded-md">
             <div class="flex max-md:flex-col-reverse items-start gap-16">
@@ -135,7 +244,7 @@
 
                 <div class="w-[40%] max-md:w-full">
                     <h2 class="text-lg font-bold mb-4">Your order</h2>
-                    <div class="border border-gray-300 rounded-md">
+                    <div class="border border-gray-300 rounded-md" id="orderList">
                         <div class="flex justify-between border-b border-gray-300 text-sm font-semibold p-6">
                             <span>Product</span>
                             <span>Subtotal</span>
@@ -155,13 +264,13 @@
                     </div>
     
                     <div class="mt-4 flex gap-2">
-                        <input type="text" class="w-full p-2 border rounded-md" placeholder="Coupon Code">
+                        <input type="text" class="w-full p-2 border rounded-md">
                         <button class="bg-green-900 text-white px-4 py-2 rounded-md">Apply</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="flex items-center justify-center w-full border-t border-white mt-[100px]">
         <div class="max-w-[1150px] flex max-lg:flex-col max-lg:px-[60px] items-center gap-16 py-[60px]">
@@ -180,6 +289,7 @@
         </div>
     </section>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
